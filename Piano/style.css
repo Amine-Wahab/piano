@@ -1,0 +1,52 @@
+#piano {
+	display: none;
+	margin-top: 50px;
+  }
+  
+  .key {
+	height: 100px;
+	width: 30px;
+	margin-right: 1px;
+	background-color: #eee;
+	border: 1px solid #999;
+  }
+  
+  .white {
+	border-radius: 2px;
+  }
+  
+  .black {
+	height: 60px;
+	width: 20px;
+	background-color: #333;
+	position: relative;
+	z-index: 1;
+	margin-left: -10px;
+	margin-right: -10px;
+	border: none;
+  }
+  
+  .black::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 30px solid #333;
+	z-index: -1;
+  }
+  
+  .key.active {
+	background-color: #ccc;
+  }
+  
+  button {
+	font-size: 24px;
+	padding: 10px;
+	margin: 50px auto;
+	display: block
+  }
